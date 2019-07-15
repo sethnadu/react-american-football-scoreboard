@@ -47,7 +47,7 @@ function App() {
           if (quarter !== 4)
           {setQuarter(quarter + 1)} 
           else if (quarter === 4){
-            setQuarter(quarter - 3);
+            setQuarter(quarter - 3); setAwayScore(awayScore * 0); setHomeScore(homeScore * 0);
           }} } className = "homeButtons__fieldGoal">Quarter</button>
           <button onClick = {() => {
           if (down !== 4)
@@ -55,7 +55,7 @@ function App() {
           else if (down === 4){
             setDown(down - 3);
           }} } className = "homeButtons__fieldGoal">Down</button>
-          <button onClick = {() => setAwayScore(awayScore * 0) + setHomeScore(homeScore * 0)} className="awayButtons__fieldGoal">Reset Scores</button>
+          <button onClick = {() =>  setAwayScore(awayScore * 0) + setHomeScore(homeScore * 0)} className="awayButtons__fieldGoal">Reset Scores</button>
 
         </div>
        
