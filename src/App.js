@@ -35,12 +35,12 @@ function App() {
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
           <button onClick ={() => setHomeScore(homeScore + 7)} className="homeButtons__touchdown">Home Touchdown</button>
           <button onClick ={() => setHomeScore(homeScore + 3)} className="homeButtons__fieldGoal">Home Field Goal</button>
-          <button onClick = {() => setHomeScore(homeScore * 0)} className="awayButtons__fieldGoal">Reset Home</button>
+          <button onClick = {() => setHomeScore(homeScore * 0)} className="awayButtons__fieldGoal">Reset Home Score</button>
         </div>
         <div className="awayButtons">
           <button onClick ={() => setAwayScore(awayScore + 7)} className="awayButtons__touchdown">Away Touchdown</button>
           <button onClick ={() => setAwayScore(awayScore + 3)} className="awayButtons__fieldGoal">Away Field Goal</button>
-          <button onClick = {() => setAwayScore(awayScore * 0)} className="awayButtons__fieldGoal">Reset Away</button>
+          <button onClick = {() => setAwayScore(awayScore * 0)} className="awayButtons__fieldGoal">Reset Away Score</button>
         </div>
         <div className ="bottomRowButtons">
         <button onClick = {() => {
@@ -55,6 +55,8 @@ function App() {
           else if (down === 4){
             setDown(down - 3);
           }} } className = "homeButtons__fieldGoal">Down</button>
+          <button onClick = {() => setAwayScore(awayScore * 0) + setHomeScore(homeScore * 0)} className="awayButtons__fieldGoal">Reset Scores</button>
+
         </div>
        
         </section> 
