@@ -11,7 +11,7 @@ function Objectives()  {
       <div className = "scoreboard">
           <h1 className="home__name">{name.name}</h1>
           <h2 className="homeButtons__touchdown">{name.location}</h2>
-          <h3 className="homeButtons__touchdown">{name.age}</h3>
+          <h3 className="homeButtons__touchdown" >{name.age}</h3>
           <h3 className="homeButtons__touchdown">{name.react}</h3>
           <section className="buttons">
            <button className="homeButtons__fieldGoal" onClick = {() => setClicked(clicked + 1)}>Click's: {clicked}</button>
