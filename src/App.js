@@ -8,7 +8,7 @@ function App() {
  const [homeScore, setHomeScore] = useState(0);
  const [awayScore, setAwayScore] = useState(0);
  const [quarter, setQuarter] = useState(1);
-
+ const [down, setDown] = useState(1);
   return (
     <div className="container">
       <section className="scoreboard">
@@ -26,7 +26,8 @@ function App() {
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow props = {quarter}/>
+        <BottomRow item = {down} quarter = {quarter}  />
+       
     
       <section className="buttons">
         <div className="homeButtons">
@@ -45,11 +46,14 @@ function App() {
           else if (quarter === 4){
             setQuarter(quarter - 3);
           }} } className = "homeButtons__fieldGoal">Quarter</button>
+          <button onClick = {() => {
+          if (down !== 4)
+          {setDown(down + 1)} 
+          else if (down === 4){
+            setDown(down - 3);
+          }} } className = "homeButtons__fieldGoal">Down</button>
         </div>
-        {/* <div>
-          <button className = "awayButtons__fieldGoal">Quarter</button>
-        </div> */}
-
+       
         </section> 
       </section>
     </div>
